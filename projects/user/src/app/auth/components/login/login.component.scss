@@ -1,0 +1,50 @@
+.loginPage{
+  .row{
+    --bs-gutter-x: 0;
+    .imageInterface{
+      img{
+        height: 760px;
+        width: 100%;
+      }
+    }
+    .loginInterface{
+      width: 100% !important;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      h2{
+        color: #bc1059;
+      }
+      form{
+          width: 80%;
+          padding: 30px;
+          border-radius: 20px;
+          box-shadow: -1px 0px 8px #bc1059;
+          .fillInput{
+            display: flex;
+            flex-direction: column;
+            mat-form-field{
+              margin-top: 20px;
+            }
+          }
+          .btnInput{
+            display: flex;
+            justify-content: center;
+            button{
+              width: 40%;
+              // color: white;
+              // background-color: #bc1059;
+            }
+          }
+          p{
+            text-align: center;
+            margin: 5px 0 0 0;
+            font-size: 13px;
+            color: blue;
+            cursor: pointer;
+          }
+        }
+    }
+  }
+}

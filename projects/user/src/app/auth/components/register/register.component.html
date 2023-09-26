@@ -1,0 +1,46 @@
+<div class="RegisterPage">
+  <div class="row">
+    <div class="col-6 p-0 col-sm-0">
+      <div class="imageInterface">
+        <img src="../../../../assets/desola-lanre-ologun-zYgV-NGZtlA-unsplash.jpg" alt="">
+      </div>
+    </div>
+    <div class="col-6 p-0">
+      <div class="RegisterInterface w-100">
+        <form [formGroup]="formRegister">
+          <h2>Register</h2>
+          <div class="fillInput">
+            <mat-form-field appearance="outline" class="w-100">
+              <mat-label>User Name</mat-label>
+              <input matInput placeholder="username" formControlName="username">
+              <mat-error *ngIf="formRegister.get('username')?.touched && formRegister.get('username')?.errors?.['required']">required</mat-error>
+              <mat-error *ngIf="formRegister.get('username')?.errors?.['minlength']"> must wrire usename more than 5 charachter</mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="w-100">
+              <mat-label>Email</mat-label>
+              <input matInput placeholder="email" formControlName="email">
+              <mat-error *ngIf="formRegister.get('email')?.touched && formRegister.get('email')?.errors?.['required']">required</mat-error>
+              <mat-error *ngIf="formRegister.get('email')?.errors?.['email']">not this Email pattern . you must write user@user.xyz</mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="w-100">
+              <mat-label>Password</mat-label>
+              <input type="password" matInput placeholder="password" formControlName="password">
+              <mat-error>required</mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="w-100">
+              <mat-label>confirm Password</mat-label>
+              <input type="password" matInput placeholder="password" formControlName="confirmPassword">
+              <mat-error>required</mat-error>
+              <mat-hint style="color:red;" *ngIf="formRegister.hasError('notSame')">password isnt identical</mat-hint>
+            </mat-form-field>
+          </div>
+          <div class="btnInput">
+            <button mat-raised-button color="warn" (click)="submit()" [disabled]="formRegister.invalid" type="button">Register</button>
+          </div>
+          <p routerLink="/auth/login" class="text-center">Have Account ?</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,16 @@
+{
+  "tasks":{
+    "All-Tasks": "كل المهمات",
+    "complete" : "مكتملة",
+    "In-Progress" :"ليست مكتملة",
+    "Deatils":"التفاصيل",
+    "complate":"اكتمال"
+  },
+  "users":{
+
+  },
+  "Global":{
+    "loading" : "انتظار",
+    "Logout" : "خروج"
+  }
+}

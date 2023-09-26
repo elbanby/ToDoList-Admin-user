@@ -1,0 +1,53 @@
+{
+  "tasks":{
+    "Add Task" : "اضافة مهمة ",
+    "complete" : "مكتملة",
+    "In-Progress" :"قيد الإكتمال",
+    "Tasks":"المهمات",
+    "ALl-Tasks" : "كل المهمات",
+    "Users" : "المستخدمبن",
+    "Search":"البحث",
+    "Select User":"اختيار مستخدم",
+    "Select status":"اختيار الحالة",
+    "Enter a date range":"ادخل التاريخ",
+    "Start date":"بداية التاريخ",
+    "End date":"نهاية التاريخ",
+
+    "Add New Task":"اضافة مهمة جديدة",
+    "Title":"العنوان",
+    "DeadLine Date":"موعد الإنتهاء",
+    "File Name":"اسم الملف",
+    "Description":"الوصف",
+    "write in this ....":"اكتب هنا",
+    "Close" : "خروج",
+    "Update":"تحديث",
+    "Creat" : "إنشاء",
+    "Message":"هل أنت متأكد من حفظ البيانات",
+    "Yes":"نعم",
+    "No":"لا"
+  },
+
+  "table":{
+    "DeadLine Date":"موعد الإنتهاء",
+    "Update":"تحديث",
+    "Title":"العنوان",
+    "user":"المستخدم",
+    "Status":"الحالة",
+    "Edit":"تعديل",
+    "Delete":"مسح"
+  },
+
+  "users":{
+    "Name":"الإسم",
+    "Email":"الإيميل",
+    "Tasks Assined":"عدد المهمات",
+    "Edit":"تعديل",
+    "Delete":"مسح",
+    "Active":"تنشيط",
+    "InActive":"إلغاء التنشيط"
+  },
+  "Global":{
+    "loading" : "انتظار",
+    "Logout" : "خروج"
+  }
+}

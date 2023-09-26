@@ -1,0 +1,51 @@
+{
+  "tasks":{
+    "Add Task" : "Add Task",
+    "complete" : "complete",
+    "In-Progress" :"In-Progress",
+    "Tasks":"Tasks",
+    "ALl-Tasks" : "ALl-Tasks",
+    "Users" : "Users",
+    "Search":"Search",
+    "Select User":"Select User",
+    "Select status":"Select status",
+    "Enter a date range":"Enter a data range",
+    "Start date":"Start date",
+    "End date":"End date",
+
+    "Add New Task":"Add New Task",
+    "Title":"Title",
+    "File Name":"File Name",
+    "DeadLine Date":"DeadLine Date",
+    "Description":"Description",
+    "write in this ....":"write in this ....",
+    "Close" : "Close",
+    "Update":"Update",
+    "Creat" : "Creat",
+    "Message":"Are you sure That want to Discripe Your changer ?",
+    "Yes":"Yes",
+    "No":"No"
+  },
+  "table":{
+    "Title":"Title",
+    "user":"user",
+    "DeadLine Date":"DeadLine Date",
+    "Status":"Status",
+    "Edit":"Edit",
+    "Update":"Update",
+    "Delete":"Delete"
+  },
+  "users":{
+    "Name":"Name",
+    "Email":"Email",
+    "Tasks Assined":"Tasks Assined",
+    "Edit":"Edit",
+    "Delete":"Delete",
+    "Active":"Active",
+    "InActive":"InActive"
+  },
+  "Global":{
+    "loading" : "loading",
+    "Logout" : "Logout"
+  }
+}

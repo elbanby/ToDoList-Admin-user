@@ -1,0 +1,30 @@
+.but{
+  button{
+    background-color:#ca085a ;
+  }
+}
+
+.filtration{
+  mat-form-field {
+    flex-basis: 24%;
+    .mat-form-field-infix {
+       width: 200px;
+       display: flex;
+       padding: 2px;
+     }
+  }
+}
+table {
+  margin-top: 20px;
+  width: 100%;
+  th{
+    background-color: #ca085a;
+    color: white;
+  }
+  td{
+    img{
+      height:70px ;
+      width: 70px;
+    }
+  }
+}

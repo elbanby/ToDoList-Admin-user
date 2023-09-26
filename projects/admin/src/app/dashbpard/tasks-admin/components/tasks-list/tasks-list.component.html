@@ -1,0 +1,90 @@
+<div class="but d-flex justify-content-end mt-3">
+  <button class="" mat-raised-button color="primary" (click)="addNewTask()">{{'tasks.Add Task' | translate }}</button>
+</div>
+<!-- Filtration -->
+<div class="filtration d-flex justify-content-between mt-3">
+  <mat-form-field appearance="outline" >
+    <mat-label>{{'tasks.Search' | translate}}</mat-label>
+    <input matInput #input placeholder="{{'tasks.Search' | translate}}" (keyup)="searchByKeyword($any($event.target).value)">
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" >
+    <mat-label>{{'tasks.Select User' | translate}}</mat-label>
+    <mat-select (selectionChange)="searchByuser($event.value)">
+      <mat-option  *ngFor="let item of users" [value]="item?._id" > {{item?.username}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>{{'tasks.Select status' | translate}}</mat-label>
+    <mat-select  (selectionChange)="searchByStatus($event.value)">
+      <mat-option *ngFor="let state of status" [value]="state.name" > {{state.name}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="w-100">
+    <mat-label>{{'tasks.Enter a date range' | translate}}</mat-label>
+    <mat-date-range-input [rangePicker]="picker">
+      <input matStartDate placeholder="{{'tasks.Start date' | translate}}" (dateChange)="searchByDate($event.value,'fromDate')">
+      <input matEndDate placeholder="{{'tasks.End date' | translate}}" (dateChange)="searchByDate($event.value,'toDate')">
+    </mat-date-range-input>
+    <!-- <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint> -->
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-date-range-picker #picker></mat-date-range-picker>
+  </mat-form-field>
+
+    <!-- <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle> -->
+
+</div>
+<!-- Table -->
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  <!-- Position Column -->
+  <ng-container matColumnDef="position">
+    <th mat-header-cell *matHeaderCellDef> No. </th>
+    <td mat-cell *matCellDef="let element">
+      <img [src]="'https://crud-p94i.onrender.com/'+ element.image">
+    </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="title">
+    <th mat-header-cell *matHeaderCellDef> {{'table.Title' | translate}} </th>
+    <td mat-cell *matCellDef="let element"> {{element.title}} </td>
+  </ng-container>
+
+  <!-- Weight Column -->
+  <ng-container matColumnDef="user">
+    <th mat-header-cell *matHeaderCellDef> {{'table.user' | translate}} </th>
+    <td mat-cell *matCellDef="let element"> {{element.user}} </td>
+  </ng-container>
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="deadline">
+    <th mat-header-cell *matHeaderCellDef> {{'table.DeadLine Date' | translate}} </th>
+    <td mat-cell *matCellDef="let element"> {{element.deadline}} </td>
+  </ng-container>
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="status">
+    <th mat-header-cell *matHeaderCellDef> {{'table.Status' | translate}} </th>
+    <td mat-cell *matCellDef="let element"> {{element.status}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="footer">
+    <th mat-header-cell *matHeaderCellDef class="text-center"> {{'table.Edit' | translate}} </th>
+    <td mat-cell *matCellDef="let element" class="text-center">
+      <button class=" me-2" mat-raised-button color="primary" (click)="updateTask(element)">{{'table.Update' | translate}}</button>
+      <button class="" mat-raised-button color="warn" (click)="deleteTask(element._id)">{{'table.Delete' | translate}}</button>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns
+  | paginate: { id:'tasks',
+  itemsPerPage:7,
+  currentPage: page,
+  totalItems: total }"></tr>
+</table>
+<div class="d-flex justify-content-center pt-5">
+  <pagination-controls (pageChange)="changePage($event)" id="tasks"></pagination-controls>
+</div>

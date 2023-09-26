@@ -1,0 +1,32 @@
+<div class="loginPage">
+  <div class="row">
+    <div class="col-6 p-0 col-sm-0">
+      <div class="imageInterface">
+        <img src="../../../../assets/desola-lanre-ologun-zYgV-NGZtlA-unsplash.jpg" alt="">
+      </div>
+    </div>
+    <div class="col-6 p-0">
+      <div class="loginInterface w-100">
+        <form [formGroup]="loginForm">
+          <h2>Login</h2>
+          <div class="fillInput">
+            <mat-form-field appearance="outline" class="w-100">
+              <mat-label>Email</mat-label>
+              <input matInput placeholder="email" formControlName="email">
+              <mat-error>required</mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="w-100">
+              <mat-label>Password</mat-label>
+              <input type="password" matInput placeholder="password" formControlName="password">
+              <mat-error>required</mat-error>
+            </mat-form-field>
+          </div>
+          <div class="btnInput">
+            <button mat-raised-button color="primary" (click)="submit()" type="button">login</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<router-outlet></router-outlet>

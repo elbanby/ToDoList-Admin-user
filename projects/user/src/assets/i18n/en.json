@@ -1,0 +1,16 @@
+{
+  "tasks":{
+    "All-Tasks": "All-Tasks",
+    "complete" : "complete",
+    "In-Progress" :"In-Progress",
+    "Deatils":"Daitails",
+    "complate":"complate"
+  },
+  "users":{
+
+  },
+  "Global":{
+    "loading" : "loading",
+    "Logout" : "Logout"
+  }
+}
